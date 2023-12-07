@@ -21,7 +21,7 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker buildx build --platform linux/amd64,linux/arm64 -t mistergg/aigrieTeam:latest .
+          docker buildx build --platform linux/amd64,linux/arm64 -t mistergg/test-container:latest:latest .
         env:
           DOCKER_BUILDKIT: 1
 
@@ -38,4 +38,4 @@ jobs:
 
       - name: Push Docker image to Docker Hub
         run: |
-          docker push mistergg/aigrieTeam:latest:latest
+          docker push mistergg/test-container:latest:latest
