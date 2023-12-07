@@ -1,0 +1,122 @@
+h1 {
+  color: #feeaa1;
+  text-align: center;
+  font-size: 25px;
+  margin: 10px auto 10px auto;
+}
+
+h2 {
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  font-weight: 100;
+}
+
+.card {
+  width: 55%;
+  background-color: #fff2dc4f;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+img {
+  max-height: 200px;
+  height: 30%;
+  width: 90%;
+  /* Centrer l'image à l'intérieur de son conteneur */
+  display: block;
+  margin: auto;
+}
+
+.card-header {
+  height: 50%;
+}
+
+li {
+  list-style: none;
+}
+
+.reponse {
+  // max-height: 40px;
+  display: flex;
+  align-items: center;
+  background: #b1bac79c;
+  border-radius: 30px;
+  margin: 10px;
+}
+
+.rounded-circle {
+  width: 30px;
+  min-width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #fff2dc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px 10px 5px 5px;
+}
+
+.number {
+  color: black;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.card-body ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap; /* Permet aux éléments de la liste de passer à la ligne */
+}
+
+.card-body li {
+  width: 50%;
+  box-sizing: border-box;
+}
+
+/* Deux éléments */
+.card-body li:nth-child(2n) {
+  clear: both;
+}
+
+/* Trois éléments*/
+.card-body li:nth-child(3) {
+  width: 100%;
+  margin: auto;
+}
+
+/* Quatre éléments */
+.card-body li:nth-child(4n-1),
+.card-body li:nth-child(4n) {
+  width: 50%;
+}
+
+@media screen and (max-width: 900px) {
+  .card {
+    width: 50%;
+  }
+}
+
+p {
+  margin-right: 5px;
+}
+
+.info {
+  text-align: center;
+  color: #feeaa1;
+}
+
+a {
+  color: #b1bac7;
+}

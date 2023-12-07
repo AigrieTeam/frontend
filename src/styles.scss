@@ -1,1 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to bottom right, #001c2f, #2a4e62);
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  font-weight: 400; /* spécifie le poids de la police */
+}
