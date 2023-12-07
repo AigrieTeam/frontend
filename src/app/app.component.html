@@ -1,9 +1,22 @@
-<app-carte-jeu
+
+<!-- header html -->
+<head>
+  <meta charset="utf-8" />
+  <title>Angular</title>
+  <base href="/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+<body>
+<app-header></app-header>
+<app-page-jeu></app-page-jeu>
+<app-footer></app-footer>
+  <app-carte-jeu
   title="titre test"
   question="En faisant vos courses, vous avez une envie subite des toasts à l'avocat. Vous arrivez au stand des avocats et vous lisez la notice suivante 'AVOCATS DE MEXIQUE 1,5e la pièce'. Est-ce que vous en achetez ?"
   image="../../assets/img/imagetest.svg"
   [reponse]="listeReponse"
   info="Déplacement géographique : La culture de l'avocat nécessite de nouvelles exploitations agricoles, entraînant le déplacement de végétation essentielle et contribuant à la déforestation, notamment dans des régions telles que l'Amérique centrale et l'Amérique du Sud."
 ></app-carte-jeu>
+</body>
 
-<router-outlet></router-outlet>
