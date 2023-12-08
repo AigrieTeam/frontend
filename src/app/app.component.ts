@@ -9,9 +9,6 @@ import { CarteJeuComponent } from './carte-jeu/carte-jeu.component';
 })
 export class AppComponent implements OnInit {
   title = 'frontend';
-<<<<<<< HEAD
-  
-=======
 
   constructor(private router: Router) {}
 
@@ -50,5 +47,4 @@ export class AppComponent implements OnInit {
     "Non, c'est trop cher",
     "Ce n'est pas très abordable sachant que c'est un produit d'import",
   ];
->>>>>>> a0b03265adce21a8f40e547a86c9fbc21c36572b
 }

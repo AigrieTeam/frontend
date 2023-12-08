@@ -22,15 +22,13 @@ export class PageJeuComponent implements OnInit {
     faSmog: faSmog,
     faUser: faUser,
   };
-<<<<<<< HEAD
 
   protected listeReponse: string[] = [
     "Oui, j'en prends 2",
     "Non, c'est trop cher",
     "Ce n'est pas très abordable sachant que c'est un produit d'import",
   ];
-=======
-  
+
   constructor(private storiesService: StoriesService, private scenariosService: ScenariosService, private choicesService: ChoicesService, private informationsService: InformationsService) {}
 
   ngOnInit(): void {
@@ -64,7 +62,7 @@ export class PageJeuComponent implements OnInit {
   }
 
 
-  //CHOICES 
+  //CHOICES
 
   async getChoices() {
     const choices = await this.choicesService.getChoices();
@@ -74,7 +72,7 @@ export class PageJeuComponent implements OnInit {
   async getChoice() {
     const choice = await this.choicesService.getChoice(2);
     console.log(choice);
-  } 
+  }
 
 
   //INFORMATIONS
@@ -88,5 +86,4 @@ export class PageJeuComponent implements OnInit {
     const information = await this.informationsService.getInformation(1);
     console.log(information);
   }
->>>>>>> a0b03265adce21a8f40e547a86c9fbc21c36572b
 }
