@@ -1,0 +1,29 @@
+@import "../../styles.scss";
+
+.card {
+  width: 55%;
+  height: fit-content;
+  background-color: #fff2dc;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.card-header {
+  border: none;
+  background: none;
+}
+
+// .rounded-circle {
+//   width: 30px;
+//   min-width: 30px;
+//   height: 30px;
+//   border-radius: 50%;
+//   background-color: $blue;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   margin: 5px 10px 5px 5px;
+// }

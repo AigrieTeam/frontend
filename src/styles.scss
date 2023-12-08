@@ -3,11 +3,11 @@
 @import "bootstrap/dist/css/bootstrap.css";
 
 // Créer des constantes de couleurs
-$dark-blue: #001C2F;
-$blue: #2A4E62;
-$light-blue: #B1BAC7;
-$yellow: #FEEAA1;
-$light-yellow: #FFF2DC;
+$dark-blue: #001c2f;
+$blue: #2a4e62;
+$light-blue: #b1bac7;
+$yellow: #feeaa1;
+$light-yellow: #fff2dc;
 
 // Body background color dark-blue
 body {
@@ -22,7 +22,8 @@ body {
 }
 
 // Navbar text color dark-blue
-.navbar-brand, .navbar-nav .nav-link {
+.navbar-brand,
+.navbar-nav .nav-link {
   color: $dark-blue;
 }
 
@@ -48,7 +49,6 @@ body {
 
 // Footer css based on navbar css fixed-bottom
 .footer {
-  position: fixed;
   bottom: 0;
   width: 100%;
   background-color: $yellow;
