@@ -26,6 +26,8 @@ export class InputuserComponent {
 
       localStorage.setItem('username', this.inputuser)
       this.router.navigate(['/game'])
+    } else {
+      alert('Veuillez entrer un nom d\'utilisateur')
     }
   }
 

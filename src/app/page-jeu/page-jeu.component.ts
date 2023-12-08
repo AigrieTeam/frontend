@@ -29,17 +29,21 @@ export class PageJeuComponent implements OnInit {
     "Ce n'est pas très abordable sachant que c'est un produit d'import",
   ];
 
-  constructor(private storiesService: StoriesService, private scenariosService: ScenariosService, private choicesService: ChoicesService, private informationsService: InformationsService) {}
+  constructor(
+    private storiesService: StoriesService,
+    private scenariosService: ScenariosService,
+    private choicesService: ChoicesService,
+    private informationsService: InformationsService
+  ) {}
 
   ngOnInit(): void {
-    this.getInformation()
+    this.getInformation();
   }
-
 
   // STORIES
 
   async getStories() {
-    const stories = await this.storiesService.getStories()
+    const stories = await this.storiesService.getStories();
     console.log(stories);
   }
 
@@ -47,7 +51,6 @@ export class PageJeuComponent implements OnInit {
     const story = await this.storiesService.getStory(2);
     console.log(story);
   }
-
 
   //SCENARIOS
 
@@ -61,7 +64,6 @@ export class PageJeuComponent implements OnInit {
     console.log(scenario);
   }
 
-
   //CHOICES
 
   async getChoices() {
@@ -73,7 +75,6 @@ export class PageJeuComponent implements OnInit {
     const choice = await this.choicesService.getChoice(2);
     console.log(choice);
   }
-
 
   //INFORMATIONS
 

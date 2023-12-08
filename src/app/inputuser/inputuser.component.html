@@ -1,18 +1,23 @@
 <div class="container my-4">
-  <div class="input-group mb-3">
-    <input
-      type="text"
-      class="form-control"
-      placeholder="Pseudo"
-      aria-label="Pseudo"
-      [(ngModel)]="inputuser"
-    />
-    <button
-      class="btn btn-outline-secondary"
-      type="button"
-      (click)="validateUsername()"
-    >
-      Jouer
-    </button>
+  <div class="col">
+    <div class="row">
+      <h1 class="text-center">Choisissez un pseudo</h1>
+      <div class="input-group mb-3">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Pseudo"
+          aria-label="Pseudo"
+          [(ngModel)]="inputuser"
+        />
+        <button
+          class="btn btn-outline-secondary"
+          type="button"
+          (click)="validateUsername()"
+        >
+          Jouer
+        </button>
+      </div>
+    </div>
   </div>
 </div>
