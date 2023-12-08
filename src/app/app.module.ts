@@ -15,7 +15,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     PageJeuComponent,
     CarteJeuComponent,
     HeaderComponent,
-    FooterComponent,
+    FooterComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FontAwesomeModule],
   providers: [],

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CarteJeuComponent } from './carte-jeu/carte-jeu.component';
 
 @Component({
   selector: 'app-root',
@@ -36,4 +37,10 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.keySequenceTrigger();
   }
+
+  protected listeReponse: string[] = [
+    "Oui, j'en prends 2",
+    "Non, c'est trop cher",
+    "Ce n'est pas très abordable sachant que c'est un produit d'import",
+  ];
 }
