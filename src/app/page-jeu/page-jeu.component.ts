@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ChoicesService } from 'src/services/backend/choices/choices.service';
-import { InformationsService } from 'src/services/backend/informations/informations.service';
 import { ScenariosService } from 'src/services/backend/scenarios/scenarios.service';
 import { StoriesService } from 'src/services/backend/stories/stories.service';
 import {
@@ -9,6 +8,8 @@ import {
   faSmog,
   faUser,
 } from '@fortawesome/free-solid-svg-icons';
+import { InformationsService } from 'src/services/backend/informations/informations.service';
+import { ScenariosChoicesService } from 'src/services/backend/scenarios-choices/scenarios-choices.service';
 
 @Component({
   selector: 'app-page-jeu',
@@ -33,11 +34,12 @@ export class PageJeuComponent implements OnInit {
     private storiesService: StoriesService,
     private scenariosService: ScenariosService,
     private choicesService: ChoicesService,
-    private informationsService: InformationsService
+    private informationsService: InformationsService,
+    private scenariosChoicesService: ScenariosChoicesService,
   ) {}
 
   ngOnInit(): void {
-    this.getInformation();
+    this.getScenariosChoices();
   }
 
   // STORIES
@@ -85,6 +87,18 @@ export class PageJeuComponent implements OnInit {
 
   async getInformation() {
     const information = await this.informationsService.getInformation(1);
+    console.log(information);
+  }
+
+  //SCENARIOS CHOICES
+
+  async getScenariosChoices() {
+    const informations = await this.scenariosChoicesService.getScenariosChoices();
+    console.log(informations);
+  }
+
+  async getScenarioChoices() {
+    const information = await this.scenariosChoicesService.getScenarioChoices(1);
     console.log(information);
   }
 }

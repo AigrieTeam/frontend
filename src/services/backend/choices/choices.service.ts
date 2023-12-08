@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class ChoicesService {
-  url = 'http://localhost:3000/api/choices';
+  url = 'http://www.aigrie-team.fr/api/choices';
 
   async getChoices() {
     try {

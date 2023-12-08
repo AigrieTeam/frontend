@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class InformationsService {
 
-  url = 'http://localhost:3000/api/informations'
+  url = 'http://www.aigrie-team.fr/api/informations'
 
   async getInformations() {
     try {

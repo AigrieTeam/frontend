@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class ScenariosService {
-  url = 'http://localhost:3000/api/scenarios';
+  url = 'http://www.aigrie-team.fr/api/scenarios';
 
   async getScenarios() {
     try {
