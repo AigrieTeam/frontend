@@ -30,6 +30,12 @@ export class PageJeuComponent implements OnInit {
     "Ce n'est pas très abordable sachant que c'est un produit d'import",
   ];
 
+  stories: any
+  story: any
+
+  scenarios: any
+  scenario: any
+
   constructor(
     private storiesService: StoriesService,
     private scenariosService: ScenariosService,
@@ -39,66 +45,21 @@ export class PageJeuComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.getScenariosChoices();
+    this.storiesService.getStories().then((data) => {
+      this.stories = data
+      //this.story = this.stories[Math.floor(Math.random() * this.stories.length)]
+      this.story = this.stories[0]
+      console.log(this.stories)
+
+      this.scenariosService.getScenarios().then((data) => {
+        console.log(data);
+        this.scenarios = data.filter((scenario: any) => {
+          scenario.Story === this.story.id;
+        })
+        console.log(this.scenarios)
+      })
+    });
   }
 
-  // STORIES
 
-  async getStories() {
-    const stories = await this.storiesService.getStories();
-    console.log(stories);
-  }
-
-  async getStory() {
-    const story = await this.storiesService.getStory(2);
-    console.log(story);
-  }
-
-  //SCENARIOS
-
-  async getScenarios() {
-    const scenarios = await this.scenariosService.getScenarios();
-    console.log(scenarios);
-  }
-
-  async getScenario() {
-    const scenario = await this.scenariosService.getScenario(1);
-    console.log(scenario);
-  }
-
-  //CHOICES
-
-  async getChoices() {
-    const choices = await this.choicesService.getChoices();
-    console.log(choices);
-  }
-
-  async getChoice() {
-    const choice = await this.choicesService.getChoice(2);
-    console.log(choice);
-  }
-
-  //INFORMATIONS
-
-  async getInformations() {
-    const informations = await this.informationsService.getInformations();
-    console.log(informations);
-  }
-
-  async getInformation() {
-    const information = await this.informationsService.getInformation(1);
-    console.log(information);
-  }
-
-  //SCENARIOS CHOICES
-
-  async getScenariosChoices() {
-    const informations = await this.scenariosChoicesService.getScenariosChoices();
-    console.log(informations);
-  }
-
-  async getScenarioChoices() {
-    const information = await this.scenariosChoicesService.getScenarioChoices(1);
-    console.log(information);
-  }
 }
