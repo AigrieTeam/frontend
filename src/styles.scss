@@ -12,6 +12,8 @@ $light-yellow: #FFF2DC;
 // Body background color dark-blue
 body {
   background: $dark-blue;
+  font-family: "Nunito", sans-serif;
+  font-weight: 400; /* spécifie le poids de la police */
 }
 
 // Navbar background FEEAA1 style
