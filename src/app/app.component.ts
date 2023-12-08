@@ -12,6 +12,10 @@ export class AppComponent implements OnInit {
 
   constructor(private router: Router) {}
 
+  ngOnInit(): void {
+    this.router.navigate(['/rules']);
+  }
+  
   keySequence: string[] = [];
   keySequenceString: string[] = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
   // ↑ ↑ ↓ ↓ ← → ← → b a

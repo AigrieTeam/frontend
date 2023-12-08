@@ -1,0 +1,16 @@
+<div class="input-group mb-3">
+  <input
+    type="text"
+    class="form-control"
+    placeholder="Recipient's username"
+    aria-label="Recipient's username"
+    [(ngModel)]="inputuser"
+  />
+  <button
+    class="btn btn-outline-secondary"
+    type="button"
+    (click)="validateUsername()"
+  >
+    Validate
+  </button>
+</div>
