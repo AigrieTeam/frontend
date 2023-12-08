@@ -1,7 +1,7 @@
 @import "../../styles.scss";
 
 .card {
-  width: 55%;
+  //   width: 20%;
   height: fit-content;
   background-color: #fff2dc;
   border-radius: 10px;
@@ -14,6 +14,10 @@
 .card-header {
   border: none;
   background: none;
+}
+
+button {
+  margin: 10px;
 }
 
 // .rounded-circle {

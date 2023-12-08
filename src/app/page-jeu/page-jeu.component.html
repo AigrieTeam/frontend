@@ -1,44 +1,41 @@
-<div class="container-fluid mt-4">
-  <div class="row">
-    <div class="col-3 d-flex justify-content-center">
-      <!-- card qui contient les lignes suivantes -->
-      <div class="card">
-        <div class="card-header">
-          <h4 class="text-center"><fa-icon [icon]="icons.faUser" /></h4>
+<div class="d-flex mt-4">
+  <div class="col-2">
+    <!-- card qui contient les lignes suivantes -->
+    <div class="card">
+      <div class="card-header">
+        <h4 class="text-center"><fa-icon [icon]="icons.faUser" /></h4>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <p class="text-center">
+            <fa-icon [icon]="icons.faMoneyBill" class="me-2" />NB MONEY
+          </p>
         </div>
-        <div class="card-body">
-          <div class="row">
-            <div class="rounded-circle">
-              <p class="text-center">
-                <fa-icon [icon]="icons.faMoneyBill" class="me-2" />NB MONEY
-              </p>
-            </div>
-          </div>
-          <div class="row">
-            <p class="text-center">
-              <fa-icon [icon]="icons.faSmog" class="me-2" />% pollution
-            </p>
-          </div>
+        <div class="row">
+          <p class="text-center">
+            <fa-icon [icon]="icons.faSmog" class="me-2" />% pollution
+          </p>
         </div>
       </div>
     </div>
+    <button type="button" class="btn btn-light">
+      Passez à la carte suivante
+    </button>
+  </div>
 
-    <div class="col">
-      <div class="row">
-        <!-- Include carte-jeu component -->
-        <app-carte-jeu
-          title="titre test"
-          question="En faisant vos courses, vous avez une envie subite des toasts à l'avocat. Vous arrivez au stand des avocats et vous lisez la notice suivante 'AVOCATS DE MEXIQUE 1,5e la pièce'. Est-ce que vous en achetez ?"
-          image="../../assets/img/imagetest.svg"
-          [reponse]="listeReponse"
-          info="Déplacement géographique : La culture de l'avocat nécessite de nouvelles exploitations agricoles, entraînant le déplacement de végétation essentielle et contribuant à la déforestation, notamment dans des régions telles que l'Amérique centrale et l'Amérique du Sud."
-        ></app-carte-jeu>
-      </div>
-      <!-- <div class="row">
-        <p id="timer">
-          <fa-icon [icon]="icons.faClock" class="me-2" />Temps restant
-        </p>
-      </div> -->
-    </div>
+  <div class="col">
+    <!-- <div class="col">
+          <div>
+            <p><fa-icon [icon]="icons.faClock" class="me-2" />Temps restant</p>
+          </div>
+        </div> -->
+    <!-- Include carte-jeu component -->
+    <app-carte-jeu
+      title="titre test"
+      question="En faisant vos courses, vous avez une envie subite des toasts à l'avocat. Vous arrivez au stand des avocats et vous lisez la notice suivante 'AVOCATS DE MEXIQUE 1,5e la pièce'. Est-ce que vous en achetez ?"
+      image="../../assets/img/imagetest.svg"
+      [reponse]="listeReponse"
+      info="Déplacement géographique : La culture de l'avocat nécessite de nouvelles exploitations agricoles, entraînant le déplacement de végétation essentielle et contribuant à la déforestation, notamment dans des régions telles que l'Amérique centrale et l'Amérique du Sud."
+    ></app-carte-jeu>
   </div>
 </div>

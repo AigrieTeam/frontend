@@ -14,11 +14,22 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.keySequenceTrigger();
-    this.router.navigate(['/rules']);
+    // this.router.navigate(['/rules']);
   }
 
   keySequence: string[] = [];
-  keySequenceString: string[] = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
+  keySequenceString: string[] = [
+    'ArrowUp',
+    'ArrowUp',
+    'ArrowDown',
+    'ArrowDown',
+    'ArrowLeft',
+    'ArrowRight',
+    'ArrowLeft',
+    'ArrowRight',
+    'b',
+    'a',
+  ];
   // ↑ ↑ ↓ ↓ ← → ← → b a
   keySequenceStringIndex = 0;
 
