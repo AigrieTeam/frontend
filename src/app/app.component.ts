@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { CarteJeuComponent } from './carte-jeu/carte-jeu.component';
 
 @Component({
@@ -8,6 +9,8 @@ import { CarteJeuComponent } from './carte-jeu/carte-jeu.component';
 })
 export class AppComponent implements OnInit {
   title = 'frontend';
+
+  constructor(private router: Router) {}
 
   keySequence: string[] = [];
   keySequenceString: string[] = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
