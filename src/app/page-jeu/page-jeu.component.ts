@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {
   faClock,
   faMoneyBill,
@@ -12,10 +12,14 @@ import {
   styleUrls: ['./page-jeu.component.scss'],
 })
 export class PageJeuComponent {
+
+
   icons = {
     faClock: faClock,
     faMoneyBill: faMoneyBill,
     faSmog: faSmog,
     faUser: faUser,
   };
+
+  
 }
