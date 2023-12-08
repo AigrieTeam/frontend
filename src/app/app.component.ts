@@ -13,9 +13,10 @@ export class AppComponent implements OnInit {
   constructor(private router: Router) {}
 
   ngOnInit(): void {
+    this.keySequenceTrigger();
     this.router.navigate(['/rules']);
   }
-  
+
   keySequence: string[] = [];
   keySequenceString: string[] = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
   // ↑ ↑ ↓ ↓ ← → ← → b a
@@ -39,10 +40,6 @@ export class AppComponent implements OnInit {
 
   trigger() {
     window.open('https://reseauactionclimat.org/urgence-climatique/', '_blank');
-  }
-
-  ngOnInit() {
-    this.keySequenceTrigger();
   }
 
   protected listeReponse: string[] = [
