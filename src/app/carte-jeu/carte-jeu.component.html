@@ -1,1 +1,32 @@
-<p>carte-jeu works!</p>
+<div class="container">
+  <div class="card">
+    <div class="card-id">
+      <div class="card-header">
+        <h1>{{ title }}</h1>
+        <h2>{{ question }}</h2>
+
+        <img src="{{ image }}" alt="illustration" />
+      </div>
+      <div class="card-body">
+        <div *ngIf="liste">
+          <ul>
+            <li *ngFor="let item of reponse; let i = index">
+              <div class="reponse">
+                <div class="rounded-circle">
+                  <span class="number">{{ i + 1 }}</span>
+                </div>
+                <p>{{ item }}</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div *ngIf="!liste">
+          <p class="info">
+            {{ info }} <span><a href="">en savoir plus</a></span>
+            <i class="fa-solid fa-house"></i>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

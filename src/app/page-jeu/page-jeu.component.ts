@@ -3,14 +3,26 @@ import { ChoicesService } from 'src/services/backend/choices/choices.service';
 import { InformationsService } from 'src/services/backend/informations/informations.service';
 import { ScenariosService } from 'src/services/backend/scenarios/scenarios.service';
 import { StoriesService } from 'src/services/backend/stories/stories.service';
+import {
+  faClock,
+  faMoneyBill,
+  faSmog,
+  faUser,
+} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-page-jeu',
   templateUrl: './page-jeu.component.html',
-  styleUrls: ['./page-jeu.component.scss']
+  styleUrls: ['./page-jeu.component.scss'],
 })
 export class PageJeuComponent implements OnInit {
-
+  icons = {
+    faClock: faClock,
+    faMoneyBill: faMoneyBill,
+    faSmog: faSmog,
+    faUser: faUser,
+  };
+  
   constructor(private storiesService: StoriesService, private scenariosService: ScenariosService, private choicesService: ChoicesService, private informationsService: InformationsService) {}
 
   ngOnInit(): void {
@@ -68,5 +80,4 @@ export class PageJeuComponent implements OnInit {
     const information = await this.informationsService.getInformation(1);
     console.log(information);
   }
-
 }

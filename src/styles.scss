@@ -1,1 +1,57 @@
 /* You can add global styles to this file, and also import other style files */
+// Import bootstrap dependencies node_modules
+@import "bootstrap/dist/css/bootstrap.css";
+
+// Créer des constantes de couleurs
+$dark-blue: #001C2F;
+$blue: #2A4E62;
+$light-blue: #B1BAC7;
+$yellow: #FEEAA1;
+$light-yellow: #FFF2DC;
+
+// Body background color dark-blue
+body {
+  background: $dark-blue;
+  font-family: "Nunito", sans-serif;
+  font-weight: 400; /* spécifie le poids de la police */
+}
+
+// Navbar background FEEAA1 style
+.navbar {
+  background-color: $yellow;
+}
+
+// Navbar text color dark-blue
+.navbar-brand, .navbar-nav .nav-link {
+  color: $dark-blue;
+}
+
+// Navbar text color blue on hover
+.navbar-nav .nav-link:hover {
+  color: $blue;
+}
+
+// Navbar text color blue on active
+.navbar-nav .nav-link.active {
+  color: $blue;
+}
+
+// Navbar text color blue on focus
+.navbar-nav .nav-link:focus {
+  color: $blue;
+}
+
+// body text color light-yellow
+body {
+  color: $light-yellow;
+}
+
+// Footer css based on navbar css fixed-bottom
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: $yellow;
+  color: $dark-blue;
+  text-align: center;
+}
